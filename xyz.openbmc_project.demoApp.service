@@ -1,0 +1,12 @@
+[Unit]
+Description=Demo Application
+After=dbus.service
+
+[Service]
+ExecStart=/usr/bin/demo-app
+Restart=always
+Type=dbus
+BusName=xyz.openbmc_project.demoApp
+
+[Install]
+WantedBy=multi-user.target
