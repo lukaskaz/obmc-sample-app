@@ -1,16 +1,10 @@
 #include "interfaces.hpp"
 
-#include <boost/asio/io_context.hpp>
 #include <boost/asio/signal_set.hpp>
 #include <boost/container/flat_map.hpp>
 #include <nlohmann/json.hpp>
-#include <sdbusplus/asio/connection.hpp>
-#include <sdbusplus/asio/object_server.hpp>
-#include <sdbusplus/asio/property.hpp>
-#include <sdbusplus/bus.hpp>
 
 #include <iostream>
-#include <memory>
 #include <string>
 
 using json = nlohmann::json;
