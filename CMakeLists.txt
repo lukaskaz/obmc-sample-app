@@ -18,15 +18,14 @@ file(GLOB PROJECT_SOURCES
 
 find_package(PkgConfig REQUIRED)
 
-pkg_check_modules(SDBUSPLUSPLUS sdbusplus REQUIRED)
+pkg_check_modules(SDBUSPLUSPLUS REQUIRED sdbusplus)
 include_directories(${SDBUSPLUSPLUS_INCLUDE_DIRS})
 link_directories(${SDBUSPLUSPLUS_LIBRARY_DIRS})
 find_program(SDBUSPLUSPLUS sdbus++)
 
-pkg_check_modules(BOOST Boost REQUIRED)
+pkg_check_modules(BOOST REQUIRED Boost)
 include_directories(${BOOST_INCLUDE_DIRS}) 
 link_directories(${BOOST_LIBRARY_DIRS})
-
 
 add_executable(${CMAKE_PROJECT_NAME} ${PROJECT_SOURCES})
 target_link_libraries (${CMAKE_PROJECT_NAME} ${SDBUSPLUSPLUS_LIBRARIES} ${BOOST_LIBRARIES})
