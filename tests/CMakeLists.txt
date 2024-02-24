@@ -35,6 +35,13 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(boost)
 
+FetchContent_Declare(
+	systemd
+	GIT_REPOSITORY https://github.com/systemd/systemd.git
+	GIT_TAG        v255
+)
+FetchContent_MakeAvailable(systemd)
+
 # ignore BOOST deprecated headers
 add_definitions("-DBOOST_ALLOW_DEPRECATED_HEADERS")
 include_directories(../src)
