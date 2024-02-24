@@ -40,5 +40,5 @@ add_definitions("-DBOOST_ALLOW_DEPRECATED_HEADERS")
 include_directories(../src)
 include_directories(${sdbusplus_SOURCE_DIR}/include)
 add_executable(${TARGET_BINARY} ${TARGET_SOURCES})
-target_link_libraries(${TARGET_BINARY} PUBLIC gtest gmock Boost::asio)
+target_link_libraries(${TARGET_BINARY} PUBLIC gtest gmock Boost::asio Boost::callable_traits)
 
