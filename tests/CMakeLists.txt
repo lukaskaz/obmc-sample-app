@@ -33,13 +33,12 @@ FetchContent_Declare(
 	GIT_REPOSITORY https://github.com/boostorg/boost.git
 	GIT_TAG        boost-1.82.0
 )
-
-#
-#FetchContent_MakeAvailable(boost)
+FetchContent_MakeAvailable(boost)
 
 # ignore BOOST deprecated headers
 add_definitions("-DBOOST_ALLOW_DEPRECATED_HEADERS")
 include_directories(../src)
 include_directories(${sdbusplus_SOURCE_DIR}/include)
 add_executable(${TARGET_BINARY} ${TARGET_SOURCES})
-target_link_libraries(${TARGET_BINARY} PUBLIC gtest gmock)
+target_link_libraries(${TARGET_BINARY} PUBLIC gtest gmock boost)
+
