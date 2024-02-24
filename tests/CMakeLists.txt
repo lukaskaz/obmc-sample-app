@@ -46,6 +46,7 @@ FetchContent_MakeAvailable(systemd)
 add_definitions("-DBOOST_ALLOW_DEPRECATED_HEADERS")
 include_directories(../src)
 include_directories(${sdbusplus_SOURCE_DIR}/include)
+include_directories(${systemd_SOURCE_DIR})
 add_executable(${TARGET_BINARY} ${TARGET_SOURCES})
 target_link_libraries(${TARGET_BINARY} PUBLIC gtest gmock Boost::asio Boost::callable_traits)
 
