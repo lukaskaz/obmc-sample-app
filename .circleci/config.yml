@@ -12,8 +12,8 @@ jobs:
       - run:
           name: Run tests
           command: |
-              sudo apt-get update && sudo apt-get install libboost-all-dev &&
-              sudo apt-get install libsystemd-dev &&
+              #sudo apt-get update && sudo apt-get install libboost-all-dev &&
+              #sudo apt-get update && sudo apt-get install libsystemd-dev &&
               cd tests && mkdir build && cd build && cmake .. && make && ./demo-app
   build:
     docker:
