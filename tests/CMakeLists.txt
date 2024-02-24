@@ -36,6 +36,20 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(boost)
 
 FetchContent_Declare(
+	boost_asio
+	GIT_REPOSITORY https://github.com/boostorg/asio.git
+	GIT_TAG        boost-1.82.0
+)
+FetchContent_MakeAvailable(boost_asio)
+
+FetchContent_Declare(
+	boost_ct
+	GIT_REPOSITORY https://github.com/boostorg/callable_traits.git
+	GIT_TAG        boost-1.82.0
+)
+FetchContent_MakeAvailable(boost_ct)
+
+FetchContent_Declare(
 	systemd
 	GIT_REPOSITORY https://github.com/systemd/systemd.git
 	GIT_TAG        v255
