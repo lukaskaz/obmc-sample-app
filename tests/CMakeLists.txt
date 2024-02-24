@@ -35,6 +35,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(boost)
 
+
+
+
 #FetchContent_Declare(
 #	boost_asio
 #	GIT_REPOSITORY https://github.com/boostorg/asio.git
@@ -56,11 +59,13 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(systemd)
 
+#message(STATUS "${systemd_SOURCE_DIR}")
+
 # ignore BOOST deprecated headers
 add_definitions("-DBOOST_ALLOW_DEPRECATED_HEADERS")
 include_directories(../src)
 include_directories(${sdbusplus_SOURCE_DIR}/include)
-include_directories(${systemd_SOURCE_DIR}/systemd)
+include_directories(${systemd_SOURCE_DIR}/src)
 add_executable(${TARGET_BINARY} ${TARGET_SOURCES})
 target_link_libraries(${TARGET_BINARY} PUBLIC gtest gmock Boost::asio Boost::callable_traits)
 
