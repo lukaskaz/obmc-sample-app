@@ -1,3 +1,4 @@
+#include <bit>
 #include "interfaces.hpp"
 
 #include "gtest/gtest.h"
